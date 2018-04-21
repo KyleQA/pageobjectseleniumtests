@@ -3,7 +3,8 @@ import org.openqa.selenium.WebDriver;
 
 public class LoginPage {
 
-  WebDriver driver;
+  private WebDriver driver;
+
 
   public LoginPage(WebDriver driver) {
     this.driver = driver;
@@ -13,6 +14,7 @@ public class LoginPage {
     private By passwordField = By.xpath(".//*[@id='pass']");
     private By loginButton = By.xpath(".//*[@id='send2']");
     private By heading = By.xpath(".//*[@id='login-form']/h2");
+    private By error = By.xpath("//div[@class='container main-content']//li[@class='error-msg']");
     private By errorEmail = By.xpath(".//*[@id='advice-required-entry-email']//div[@class='validation-advice']");
     private By errorPass = By.xpath(".//*[@id='advice-required-entry-pass']//div[@class='validation-advice']");
     private By createAccLink = By.xpath("//div[@class='btn btn-info validation-passed']");
@@ -28,11 +30,6 @@ public class LoginPage {
       return this;
     }
 
-    public LoginPage clickLoginButton(){
-      driver.findElement(loginButton).click();
-      return new LoginPage(driver);
-    }
-
 
     public LoginPage loginWithInvalidCreds(String username, String password){
       this.typeUsername(username);
@@ -41,7 +38,9 @@ public class LoginPage {
       return new LoginPage(driver);
     }
 
-
+    public String getErrorText(){
+      return driver.findElement(error).getText();
+    }
 
     public String getErrorEmailText(){
       return driver.findElement(errorEmail).getText();
@@ -51,7 +50,7 @@ public class LoginPage {
       return driver.findElement(heading).getText();
     }
 
-    public String getErrorText(){
+    public String getErrorPassText(){
       return driver.findElement(errorPass).getText();
     }
 

@@ -12,11 +12,11 @@ import java.util.concurrent.TimeUnit;
 public class MainPageTest {
 
   private WebDriver driver;
-  private  MainPage mainPage;
+  private MainPage mainPage;
 
   //@Before
   public void setUpG(){
-    System.setProperty("webdriver.gecko.driver", "c:\\Drivers\\Firefox\\geckodriver.exe");
+    System.setProperty("webdriver.gecko.driver", "c:\\Tools\\geckodriver.exe");
     driver = new FirefoxDriver();
     driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     driver.manage().window().maximize();
@@ -26,7 +26,7 @@ public class MainPageTest {
 
   @Before
   public void setUpC(){
-    System.setProperty("webdriver.chrome.driver", "c:\\Drivers\\Chrome\\chromedriver.exe");
+    System.setProperty("webdriver.chrome.driver", "c:\\Tools\\chromedriver.exe");
     driver = new ChromeDriver();
     driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     driver.manage().window().maximize();
@@ -44,6 +44,7 @@ public class MainPageTest {
     String heading = loginPage.getHeadingText();
     Assert.assertEquals("LOGIN OR CREATE AN ACCOUNT", heading);
   }
+
 
   //@Test
   public void shipping(){

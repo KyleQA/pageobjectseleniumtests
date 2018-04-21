@@ -3,7 +3,7 @@ import org.openqa.selenium.WebDriver;
 
 public class RegisterPage {
 
-  WebDriver driver;
+  private WebDriver driver;
 
   public RegisterPage(WebDriver driver) {
     this.driver = driver;
@@ -41,8 +41,8 @@ public class RegisterPage {
     return this;
   }
 
-  public RegisterPage typePasswordConfirm(String password){
-    driver.findElement(passwordConfirmField).sendKeys(password);
+  public RegisterPage typePasswordConfirm(String confpassword){
+    driver.findElement(passwordConfirmField).sendKeys(confpassword);
     return this;
   }
 
@@ -56,20 +56,29 @@ public class RegisterPage {
     return this;
   }
 
-  public RegisterPage registerWithInvalidCreds(String firstName, String lastName, String email, String password){
+  public RegisterPage registerWithInvalidCreds(String firstName, String lastName, String email, String password, String confpassword){
     this.typeFirstName(firstName);
     this.typeLastName(lastName);
     this.typeEmail(email);
     this.typePassword(password);
-    this.typePasswordConfirm(password);
+    this.typePasswordConfirm(confpassword);
     driver.findElement(reCaptcha).click();
     driver.findElement(registerButton).click();
     return new RegisterPage(driver);
 
   }
 
+  public String getEmailErrorText(){
+    return driver.findElement(emailError).getText();
+  }
 
+  public String getPasswordErrorText(){
+    return driver.findElement(passwordError).getText();
+  }
 
+  public String getPasswordConfirmErrorText(){
+    return driver.findElement(passwordConfirmError).getText();
+  }
 
 
 
