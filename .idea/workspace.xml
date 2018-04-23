@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b890f677-da17-40b3-9c80-5f14054fb5e1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LoginPage.java" afterPath="$PROJECT_DIR$/src/main/java/LoginPage.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegisterPage.java" afterPath="$PROJECT_DIR$/src/main/java/RegisterPage.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LoginPageTest.java" afterPath="$PROJECT_DIR$/src/test/java/LoginPageTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RegisterPageTest.java" afterPath="$PROJECT_DIR$/src/test/java/RegisterPageTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegisterPageTest.java" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -72,20 +68,6 @@
                 <element signature="e#2553#2554#0" expanded="true" />
                 <element signature="e#2601#2602#0" expanded="true" />
                 <element signature="e#2668#2669#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegisterPageTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/RegisterPageTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="26" column="103" lean-forward="false" selection-start-line="26" selection-start-column="103" selection-end-line="26" selection-end-column="103" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1106#1107#0" expanded="true" />
-                <element signature="e#1135#1136#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1116,11 +1098,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="26" column="103" lean-forward="false" selection-start-line="26" selection-start-column="103" selection-end-line="26" selection-end-column="103" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1106#1107#0" expanded="true" />
-            <element signature="e#1135#1136#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
