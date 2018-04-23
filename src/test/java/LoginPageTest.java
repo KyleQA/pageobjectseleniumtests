@@ -31,7 +31,7 @@ public class LoginPageTest {
        Assert.assertEquals("Invalid login or password.", error);
     }
 
-    //@Test
+    @Test
     public void loginWithInvalidCredsTestP(){
         LoginPage newLoginPage = loginPage.loginWithInvalidCreds("kirillqatest1@gmail.com","1234567");
         String error = newLoginPage.getErrorText();

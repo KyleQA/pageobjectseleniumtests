@@ -24,7 +24,7 @@ public class RegisterPageTest {
 
    @Test
    public void registerWithErrorEmail(){
-       RegisterPage newRegisterPage = registerPage.registerWithInvalidCreds("","", "qwerty@", "", "");
+       RegisterPage newRegisterPage = registerPage.registerWithInvalidCreds("1","1", "qwerty@", "1", "1");
        String eError = newRegisterPage.getEmailErrorText();
        Assert.assertEquals("Please enter a valid email address. For example johndoe@domain.com.", eError);
    }

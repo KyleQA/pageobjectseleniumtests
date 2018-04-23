@@ -15,7 +15,7 @@ public class RegisterPage {
   private By emailAddressField = By.xpath(".//*[@id='email_address']");
   private By passwordField = By.xpath(".//*[@id='password']");
   private By passwordConfirmField = By.xpath(".//*[@id='confirmation']");
-  private By reCaptcha = By.xpath(".//*[@id='recaptcha-anchor']/div[5]");
+  private By reCaptcha = By.xpath("//div[5]");
   private By registerButton = By.xpath(".//*[@id='create-account-submit-button']");
   private By emailError = By.xpath(".//*[@id='advice-required-entry-email_address']");
   private By passwordError = By.xpath(".//*[@id='advice-required-entry-email_address']");
