@@ -67,7 +67,7 @@ public class MainPageTest {
     Assert.assertEquals("ABOUT SPIRITED GIFTS", headingAbout);
   }
 
-  @Test
+  //@Test
   public void blog(){
     BlogPage blogPage = mainPage.clickBlog();
 
@@ -79,6 +79,56 @@ public class MainPageTest {
     BlogPage blogPost = blogPage.selectPost();
     String headingPostBloodOath = blogPage.getHeadingContactText();
     Assert.assertEquals("Blood Oath Pact #3 Released!", headingPostBloodOath);
+  }
+
+
+  //@Test
+  public void search (){
+    MainPage newMainPage = mainPage.findProductInSearchField("woodford");
+    String headingSearchTitle = mainPage.getHeadingSearchText();
+    Assert.assertEquals("Search results for 'woodford'", headingSearchTitle);
+  }
+
+  //@Test
+  public void shopByPDP(){
+    MainPage newMainPage = mainPage.clickShopByMenu();
+    String headingShopBy = mainPage.getHeadingShopByMenuText();
+    Assert.assertEquals("CUSTOMER FAVORITES", headingShopBy);
+  }
+
+  //@Test
+  public void engravingMenuPDP(){
+    MainPage newMainPage = mainPage.clickEngravingMenu();
+    String headingEngravingMenu = mainPage.getHeadingEngravingMenuText();
+    Assert.assertEquals("ENGRAVED BOTTLES", headingEngravingMenu);
+  }
+
+  //@Test
+  public void titleGiftsMenuPDP(){
+    MainPage newMainPage = mainPage.clickGiftsMenu();
+    String headingGiftsMenu = mainPage.getHeadingGiftMenuText();
+    Assert.assertEquals("LIQUOR & COCKTAIL GIFT SETS", headingGiftsMenu);
+  }
+
+  //@Test
+  public void titleOccasionMenuPDP(){
+    MainPage newMainPage = mainPage.clickOccasionMenu();
+    String headingOccasionMenu = mainPage.getHeadingOccasionMenuText();
+    Assert.assertEquals("GIFTS BY OCCASION", headingOccasionMenu);
+  }
+
+  //@Test
+  public void titleBrandsMenuPDP(){
+    MainPage newMainPage = mainPage.clickBrandsMenu();
+    String headingBrandsMenu = mainPage.getHeadingBrandsMenuText();
+    Assert.assertEquals("BRANDS", headingBrandsMenu);
+  }
+
+  //@Test
+  public void titleCorporateMenuPDP(){
+    MainPage newMainPage = mainPage.clickCorporateMenu();
+    String headingCorporateMenu = mainPage.getHeadingCorporateMenuText();
+    Assert.assertEquals("LARGE ORDERS AND CORPORATE SERVICES", headingCorporateMenu);
   }
 
 
