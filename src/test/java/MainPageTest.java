@@ -38,7 +38,7 @@ public class MainPageTest {
 
 
 
-  //@Test
+  @Test
   public void logIn(){
     LoginPage loginPage = mainPage.clickAccButton();
     String heading = loginPage.getHeadingText();
