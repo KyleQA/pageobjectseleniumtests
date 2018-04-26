@@ -38,7 +38,7 @@ public class MainPageTest {
 
 
 
-  //@Test
+  @Test
   public void logIn(){
     LoginPage loginPage = mainPage.clickAccButton();
     String heading = loginPage.getHeadingText();
@@ -46,28 +46,28 @@ public class MainPageTest {
   }
 
 
-  //@Test
+  @Test
   public void shipping(){
     ShippingPage shippingPage = mainPage.clickShipping();
     String headingShip = shippingPage.getHeadingShipText();
     Assert.assertEquals("SHIPPING & RETURNS", headingShip);
   }
 
-  //@Test
+  @Test
   public void contact(){
     ContactPage contactPage = mainPage.clickContact();
     String headingContact = contactPage.getHeadingContactText();
     Assert.assertEquals("CONTACT US", headingContact);
   }
 
-  //@Test
+  @Test
   public void about(){
     AboutPage aboutPage = mainPage.clickAbout();
     String headingAbout = aboutPage.getHeadingAboutText();
     Assert.assertEquals("ABOUT SPIRITED GIFTS", headingAbout);
   }
 
-  //@Test
+  @Test
   public void blog(){
     BlogPage blogPage = mainPage.clickBlog();
 
@@ -82,49 +82,49 @@ public class MainPageTest {
   }
 
 
-  //@Test
+  @Test
   public void search (){
     MainPage newMainPage = mainPage.findProductInSearchField("woodford");
     String headingSearchTitle = mainPage.getHeadingSearchText();
     Assert.assertEquals("Search results for 'woodford'", headingSearchTitle);
   }
 
-  //@Test
+  @Test
   public void shopByPDP(){
     MainPage newMainPage = mainPage.clickShopByMenu();
     String headingShopBy = mainPage.getHeadingShopByMenuText();
     Assert.assertEquals("CUSTOMER FAVORITES", headingShopBy);
   }
 
-  //@Test
+  @Test
   public void engravingMenuPDP(){
     MainPage newMainPage = mainPage.clickEngravingMenu();
     String headingEngravingMenu = mainPage.getHeadingEngravingMenuText();
     Assert.assertEquals("ENGRAVED BOTTLES", headingEngravingMenu);
   }
 
-  //@Test
+  @Test
   public void titleGiftsMenuPDP(){
     MainPage newMainPage = mainPage.clickGiftsMenu();
     String headingGiftsMenu = mainPage.getHeadingGiftMenuText();
     Assert.assertEquals("LIQUOR & COCKTAIL GIFT SETS", headingGiftsMenu);
   }
 
-  //@Test
+  @Test
   public void titleOccasionMenuPDP(){
     MainPage newMainPage = mainPage.clickOccasionMenu();
     String headingOccasionMenu = mainPage.getHeadingOccasionMenuText();
     Assert.assertEquals("GIFTS BY OCCASION", headingOccasionMenu);
   }
 
-  //@Test
+  @Test
   public void titleBrandsMenuPDP(){
     MainPage newMainPage = mainPage.clickBrandsMenu();
     String headingBrandsMenu = mainPage.getHeadingBrandsMenuText();
     Assert.assertEquals("BRANDS", headingBrandsMenu);
   }
 
-  //@Test
+  @Test
   public void titleCorporateMenuPDP(){
     MainPage newMainPage = mainPage.clickCorporateMenu();
     String headingCorporateMenu = mainPage.getHeadingCorporateMenuText();
